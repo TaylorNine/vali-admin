@@ -1,13 +1,11 @@
 //
-// Application Variables
+// Rebel Chef Variables
+// Override default Bootstrap variables.
 //-----------------------------------------------------
 
-// Primary font
-$body-font: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
-//
-// Theme Colors
-//
+// Shadows
+$shadow-color:          rgba(15, 15, 15, .2);
+$box-shadow:            0 0 3px $shadow-color;
 
 $white: #FFF;
 
@@ -52,3 +50,5 @@ $sidebar-dark-link-color: #fff;
 // and link hover color when using a light sidebar color
 $sidebar-light-color: #000;
 $sidebar-light-link-color: #333;
+
+

@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+
+	//- Variables to set active page in sidebar
+	block variables
+		- var activePage = 'dashboard'
+		- var activeGroup = 'none'
+
+	include ../includes/_mixins.pug
+
+	head
+		meta(name="description", content="Insert Rebel Chef description here.")
+		
+		// TO DO: ADD REBEL CHEF TWITTER CARD, OPEN GRAPH & GOOGLE ANALYTICS
+
+		// Twitter meta
+		// meta(property="twitter:card", content="summary_large_image")
+		// meta(property="twitter:site", content="@pratikborsadiya")
+		// meta(property="twitter:creator", content="@pratikborsadiya")
+
+		// Open Graph Meta
+		// meta(property="og:type", content="website")
+		// meta(property="og:site_name", content="Rebel Chef")
+		// meta(property="og:title", content="Rebel Chef - Taste The Revolution")
+		// meta(property='og:url', content='')
+		// meta(property='og:image', content='')
+		// meta(property="og:description", content="")
+
+		include ../includes/_head.pug
+
+	body
+
+		// NAVBAR
+		include ../includes/_navbar.pug
+
+		// HERO
+		include ../includes/_hero.pug
+
+		// CORE VALUES
+		include ../includes/_core-values.pug
+		
+		// MISSION STATEMENT
+		include ../includes/_mission-statement.pug
+
+		// MENUS
+		include ../includes/_menus.pug
+
+		// LOCATION & HOURS
+		include ../includes/_location.pug
+
+		// FOOTER
+		include ../includes/_footer.pug
+
+		//- Javascripts
+		include ../includes/_javascript.pug
+		// Page specific javascripts
+		block specific-js
+
+		// Google analytics script
+		// ADD GOOGLE ANALYTICS

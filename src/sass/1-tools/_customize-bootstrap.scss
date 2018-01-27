@@ -1,15 +1,301 @@
-//
+// Rebel Chef Bootstrap Theme
 // Customize bootstrap variables to match
 // look and feel of the theme
 //-----------------------------------------------------
 
-$primary: $primary-color;
+@import "vars";
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+// Rebel Chef Palette
+$red: 				   #611127;
+$blue: 				   #033157;
+$light-blue: 	       #20a4f3;
+$green: 			   #2ec4b6;
+
+$light-gray:	       #f6f7f8;
+$medium-gray:          #474747;
+$dark-gray: 	       #323233;
+
+// Brand colors
+$brand-primary:         $red;
+$brand-secondary:       $blue;
+$brand-dark:            hsl(343, 70%, 15%);
+$brand-light:           hsl(343, 70%, 30%);
+
+$color-success:         $green;
+$color-info:            $light-blue;
+$color-warning:         #c4912e;
+$color-danger:           #b34444;
+
+$body-bg:               $light-gray;
+
+$gray:                  #dee6ea;
+$gray-light:            #edf3f6;
+$deep-blue:             #171722; // Deprecated
+$white:                 $light-gray;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":        $brand-primary,
+  "secondary":      $brand-secondary,
+  "primary-light":  $brand-light,
+  "primary-dark":   $brand-dark,
+  "success":        $color-success,
+  "info":           $color-info,
+  "warning":        $color-warning,
+  "danger":         $color-danger,
+  "light":          $light-gray,
+  "medium":         $medium-gray,
+  "dark":           $dark-gray
+), $theme-colors);
+
+$fb:            rgb(59, 89, 182);
+$tw:            rgb(64, 153, 255);
+$googleplus:    rgb(215, 61, 50);
+$pinterest:     rgb(203, 32, 39);
+$skype:         rgb(18, 165, 244);
+$spotify:       rgb(129, 183, 26);
+$instagram:     #4e433c;
+$tumblr:        #2b4964;
+$vimeo:         #86b32d;
+$soundcloud:    #f76600;
+$youtube:       #ff3333;
+$linkedin:      #4875b4;
+$flickr:        #fe0883;
+$foursquare:    #8fd400;
+
+$social-media-colors: () !default;
+$social-media-colors: map-merge((
+    "fb":           $fb,
+    "tw":           $tw,
+    "googleplus":   $googleplus,
+    "pinterest":    $pinterest, 
+    "skype":        $skype, 
+    "spotify":      $spotify,
+    "instagram":    $instagram,       
+    "tumblr":       $tumblr,
+    "vimeo":        $vimeo,    
+    "soundcloud":   $soundcloud,    
+    "youtube":      $youtube,    
+    "linkedin":     $linkedin,
+    "flickr":       $flickr,
+    "foursquare":   $foursquare    
+    ), $social-media-colors);
+
+// COLORS FOR PACE
+$primary-color:         $red;
+$complementry-color:    $light-gray;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $light-gray !default;
+$body-color:                $dark-gray !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                theme-color("primary") !default;
+$link-decoration:           none !default;
+$link-hover-color:          theme-color("primary-dark") !default;
+$link-hover-background:     theme-color("light") !default;
+$link-hover-decoration:     none !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
 
 // Customize typographic styles
-$font-size-base: 0.875rem;
+$font-size-base: 1rem;
 $font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$link-color: $primary-color;
-$headings-font-weight: bold;
+$headings-font-weight: 900;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5rem !default;
+$line-height-sm:              1.5rem !default;
+
+$border-width:                1px !default;
+$border-color:                theme-color("light") !default;
+
+$border-radius:               1px !default;
+$border-radius-lg:            1px !default;
+$border-radius-sm:            1px !default;
+
+$component-active-color:      theme-color("primary-dark") !default;
+$component-active-bg:         theme-color("light") !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// Primary font
+$body-font: 'PT Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$body-font-cond: 'PT Sans Narrow',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headline-font: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      $body-font !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $headline-font !default;
+// stylelint-enable value-keyword-case
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-black:           900 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        900 !default;
+$headings-line-height:        1 !default;
+$headings-color:              inherit !default;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;
+
+$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-weight:            300 !default;
+
+$small-font-size:             80% !default;
+
+$text-muted:                  $gray-600 !default;
+
+$blockquote-small-color:      $gray-600 !default;
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+
+$hr-border-color:            theme-color("medium") !default;
+$hr-border-width:             $border-width !default;
+
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$hr-margin-y:                 $spacer !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               $input-btn-padding-x !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+$btn-border-width:            $input-btn-border-width !default;
+
+$btn-font-weight:             $font-weight-normal !default;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-focus-width:             $input-btn-focus-width !default;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity:        .65 !default;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$btn-link-disabled-color:     $gray-600 !default;
+
+$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
+
+$btn-transition:             color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, border-size .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 // Customize Dropdown styles
 $dropdown-padding-y: 0;
@@ -19,18 +305,50 @@ $dropdown-item-padding-y: 8px;
 $dropdown-item-padding-x: 20px;
 
 // Customize button styles
-$btn-border-radius: 3px;
-$btn-border-radius-lg: 3px;
-$btn-border-radius-sm: 3px;
+$btn-border-radius: 2px;
+$btn-border-radius-lg: 2px;
+$btn-border-radius-sm: 2px;
 $btn-font-weight: 700;
 $btn-transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
 // Custmize form component styles
 
-$input-border-radius: 4px;
-$input-border-radius-lg: 4px;
-$input-border-radius-sm: 4px;
+$input-border-radius: 2px;
+$input-border-radius-lg: 2px;
+$input-border-radius-sm: 2px;
 $input-focus-border-color: $primary-color;
 $input-btn-border-width: 2px;
 $input-btn-focus-box-shadow: none;
 $input-btn-focus-width: 0;
+
+// Navbar
+
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-x:                  $spacer !default;
+
+$navbar-nav-link-padding-x:         .5rem !default;
+
+$navbar-brand-font-size:            $font-size-lg !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+
+$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-font-size:          $font-size-lg !default;
+$navbar-toggler-border-radius:      $btn-border-radius !default;
+
+$navbar-dark-color:                 rgba($white, .5) !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-active-color:          $white !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+
+$navbar-light-color:                theme-color("light") !default;
+$navbar-light-hover-color:          theme-color("primary") !default;
+$navbar-light-active-color:         theme-color("primary-light") !default;
+$navbar-light-disabled-color:      $gray-400 !default;
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border-color: theme-color("primary") !default;

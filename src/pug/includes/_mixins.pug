@@ -1,0 +1,17 @@
+// Button Mixin
+// Rebel Chef Custom Buttons
+
+//- Button mixin
+mixin button(color, href, size)
+    - var color = (typeof color === 'undefined') ? "red" : color
+    - var href = (typeof href === 'undefined') ? "#" : href
+    case size
+        when "large"
+            - size = "btn-lg"
+        when "small"
+            - size = "btn-sm"
+        when "mini"
+            - size = "btn-xs"
+ 
+    a( class=["btn", "btn-" + color, size], href=href )
+        block 
